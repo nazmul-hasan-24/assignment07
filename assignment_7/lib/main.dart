@@ -1,3 +1,4 @@
+
 import 'package:assignment_7/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +26,8 @@ class MyApp extends StatelessWidget {
                   ),
                   ),
                   ),
-      home: const MyHomePage(),
+      home:  const MyHomePage(),
     );
   }
 }
-
 
