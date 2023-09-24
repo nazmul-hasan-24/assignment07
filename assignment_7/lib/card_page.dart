@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
+final List<String> cart =[];
 class CartPage extends StatefulWidget {
-  final int totalProductsInCart = 0;
-  const CartPage( {
-    super.key,
     
+   CartPage( {
+    super.key,
     });
 
   @override
@@ -12,9 +11,12 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  
+
+
+  get productTitle => null;
   @override
   Widget build(BuildContext context) {
+    // int? totalProductsInCart;
     return  Scaffold(
       appBar: AppBar(title: const Text("Cart",
       style: TextStyle(fontSize: 18),
@@ -23,12 +25,15 @@ class _CartPageState extends State<CartPage> {
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(15.0)),
       ),
       ),
-      body:  Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Total products in cadt: ${widget.totalProductsInCart.toString()}")
-          ],
+      body:  Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Total products in cadt:  $cart")
+            ],
+          ),
         ),
       ),
       );

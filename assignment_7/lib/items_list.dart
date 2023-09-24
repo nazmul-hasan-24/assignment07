@@ -1,25 +1,38 @@
+import 'package:assignment_7/card_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Rows extends StatefulWidget {
+ 
   String productTitle;
   final double productPrise;
+  
+  var cart;
   Rows(
       {super.key,
       required this.productTitle,
       required this.productPrise,
       });
 
-  @override
+     @override
   State<Rows> createState() => _RowsState();
 }
 
 class _RowsState extends State<Rows> {
-  int list_count =0;
+  int listCount =0;
+  
+
+  void itemCount(){
+    setState(() {
+   
+      cart.add(widget.productTitle);
+    });
+  }
+
    void _itemInCrement(){
 setState(() {
-  list_count++;
-  if(list_count == 5){
+  listCount++;
+  if(listCount == 5){
     _showDialog();
   }
 });
@@ -68,7 +81,7 @@ setState(() {
         const SizedBox(height: 10,),
         Column(
           children: [
-            Text("Counter: $list_count",
+            Text("Counter: $listCount",
             style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w500
@@ -78,6 +91,7 @@ setState(() {
             TextButton(
               onPressed: () {
                 _itemInCrement();
+               itemCount();
               },
               child: const Text("Buy Now"),
             )
@@ -88,3 +102,4 @@ setState(() {
   }
  
 }
+
