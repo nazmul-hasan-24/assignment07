@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-final List<String> cart =[];
+ List<String> cart =[];
+
 class CartPage extends StatefulWidget {
     
-   CartPage( {
+   const CartPage( {
     super.key,
     });
 
@@ -13,7 +14,6 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
 
 
-  get productTitle => null;
   @override
   Widget build(BuildContext context) {
     // int? totalProductsInCart;
@@ -31,7 +31,7 @@ class _CartPageState extends State<CartPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Total products in cadt:  $cart")
+              Text("Total products in cart:  $cart")
             ],
           ),
         ),
@@ -39,3 +39,4 @@ class _CartPageState extends State<CartPage> {
       );
   }
 }
+

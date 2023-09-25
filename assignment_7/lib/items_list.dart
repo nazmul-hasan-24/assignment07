@@ -1,4 +1,5 @@
 import 'package:assignment_7/card_page.dart';
+
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -25,7 +26,8 @@ class _RowsState extends State<Rows> {
   void itemCount(){
     setState(() {
    
-      cart.add(widget.productTitle);
+     
+      cart.add(widget.productTitle );
     });
   }
 
@@ -102,4 +104,5 @@ setState(() {
   }
  
 }
+
 
