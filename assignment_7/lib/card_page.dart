@@ -16,7 +16,7 @@ class _CartPageState extends State<CartPage> {
 
   @override
   Widget build(BuildContext context) {
-    // int? totalProductsInCart;
+   
     return  Scaffold(
       appBar: AppBar(title: const Text("Cart",
       style: TextStyle(fontSize: 18),
